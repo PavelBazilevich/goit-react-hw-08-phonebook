@@ -1,10 +1,12 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container, Header, Link } from './AppBar.styled';
-import { LogIn } from 'components/Registration/LogIn';
+import LogInRef from 'components/Registration/LogInRef';
 import UserMenu from 'components/Registration/UserMenu';
+import { useAuth } from 'components/hooks';
 
 const AppBar = () => {
+  const { isLoggedIn } = useAuth();
   return (
     <Container>
       <Header>
@@ -12,10 +14,9 @@ const AppBar = () => {
           <Link to="home" end>
             Home
           </Link>
-          <Link to="contacts">Contacts</Link>
+          {isLoggedIn && <Link to="contacts">Contacts</Link>}
         </nav>
-        <LogIn />
-        <UserMenu />
+        {isLoggedIn ? <UserMenu /> : <LogInRef />}
       </Header>
       <Suspense fallback={<div>Loading subpage...</div>}>
         <Outlet />

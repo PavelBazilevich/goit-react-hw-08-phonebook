@@ -42,6 +42,7 @@ export const Layout = styled.div`
 `;
 
 export const Title = styled.h1`
+  padding: 5px;
   font-size: 60px;
   border-radius: 5px;
   background-color: #2196f3;

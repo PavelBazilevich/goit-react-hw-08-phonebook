@@ -19,7 +19,7 @@ export const ContactList = () => {
           <li key={nanoid()} id={contact.id}>
             <span
               className={css.item_content}
-            >{`${contact.name}:  ${contact.phone}`}</span>
+            >{`${contact.name}:  ${contact.number}`}</span>
             <button
               className={css.deleted_button}
               data-id={contact.id}

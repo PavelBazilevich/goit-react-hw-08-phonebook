@@ -1,5 +1,5 @@
 import { Link } from './Registration.styled';
-export const LogIn = () => {
+const LogInRef = () => {
   return (
     <ul>
       <li>
@@ -11,3 +11,4 @@ export const LogIn = () => {
     </ul>
   );
 };
+export default LogInRef;

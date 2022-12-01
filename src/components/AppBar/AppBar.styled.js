@@ -11,7 +11,7 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  padding: 5px;
   border-bottom: 1px solid #2196f3;
   > nav,
   ul {
@@ -21,7 +21,7 @@ export const Header = styled.header`
 
 export const Link = styled(NavLink)`
   font-size: 20px;
-  padding: 8px 14px;
+  padding: 5px 14px;
   border-radius: 4px;
   text-decoration: none;
   color: black;

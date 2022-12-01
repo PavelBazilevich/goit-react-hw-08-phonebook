@@ -27,8 +27,8 @@ export const addContact = createAsyncThunk(
   async ({ name, number }, thunkAPI) => {
     try {
       const response = await axios.post('/contacts', {
-        name: name,
-        phone: number,
+        name,
+        number,
       });
       // При успішному запиті повертаємо проміс із даними
       return response.data;

@@ -16,26 +16,27 @@ const contactsSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
-
+    token: null,
     filter: '',
   },
   // Об'єкт редюсерів
   extraReducers: {
     [fetchContacts.pending]: handlePending,
-    [fetchContacts.fulfilled](state, action) {
-      state.isLoading = false;
-      state.items = action.payload;
-      state.error = null;
-    },
     [fetchContacts.rejected]: handleRejected,
     [addContact.pending]: handlePending,
+    [addContact.rejected]: handleRejected,
+    [deleteContact.pending]: handlePending,
+    [deleteContact.rejected]: handleRejected,
+    [fetchContacts.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.items = action.payload;
+    },
     [addContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
     },
-    [addContact.rejected]: handleRejected,
-    [deleteContact.pending]: handlePending,
     [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
@@ -44,7 +45,6 @@ const contactsSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
-    [deleteContact.rejected]: handleRejected,
   },
 });
 
