@@ -26,7 +26,7 @@ export const App = () => {
     <>
       <Routes>
         <Route path="/" element={<AppBar />}>
-          <Route index path="home" element={<Home />} />
+          <Route index element={<Home />} />
           <Route
             path="register"
             element={

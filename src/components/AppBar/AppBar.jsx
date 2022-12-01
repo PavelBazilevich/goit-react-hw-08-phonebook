@@ -11,9 +11,7 @@ const AppBar = () => {
     <Container>
       <Header>
         <nav>
-          <Link to="home" end>
-            Home
-          </Link>
+          <Link to="/">Home</Link>
           {isLoggedIn && <Link to="contacts">Contacts</Link>}
         </nav>
         {isLoggedIn ? <UserMenu /> : <LogInRef />}
