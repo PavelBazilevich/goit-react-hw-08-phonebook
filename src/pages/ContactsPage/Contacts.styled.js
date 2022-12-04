@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import tel from '../../pictures/tel.png';
 export const Layout = styled.div`
   position: relative;
   width: 100%;
@@ -10,35 +9,6 @@ export const Layout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  &::before {
-    top: 40px;
-    left: 0;
-    position: absolute;
-    content: '';
-    width: 440px;
-    height: 800px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(${tel});
-    z-index: 10;
-
-    background-size: cover;
-  }
-  &::after {
-    top: 40px;
-    right: 20px;
-    position: absolute;
-    content: '';
-    width: 440px;
-    height: 800px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(${tel});
-    z-index: 9;
-
-    background-size: cover;
-  }
 `;
 
 export const Title = styled.h1`

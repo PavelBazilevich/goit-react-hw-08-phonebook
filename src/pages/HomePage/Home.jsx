@@ -1,16 +1,18 @@
-import { Title, Container, Link } from './Home.styled';
+import { Title, Container, Link, Main, Description } from './Home.styled';
 const Home = () => {
   return (
-    <main>
+    <Main>
       <Container>
         <div>
           <Title>Phonebook</Title>
         </div>
         <div></div>
-        <p>A fast and convenient application for your contacts</p>
+        <Description>
+          A fast and convenient application for your contacts
+        </Description>
         <Link to="/contacts">Try it</Link>
       </Container>
-    </main>
+    </Main>
   );
 };
 export default Home;
