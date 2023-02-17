@@ -19,6 +19,7 @@ const contactsSlice = createSlice({
     token: null,
     filter: '',
   },
+
   // Об'єкт редюсерів
   extraReducers: {
     [fetchContacts.pending]: handlePending,
